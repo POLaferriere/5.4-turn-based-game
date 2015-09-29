@@ -71,22 +71,27 @@ gulp.task('templates', function() {
 });
 
 gulp.task('images', function(){
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('app/images/**/*')  //+(png|jpg|jpeg|gif|svg)'
     .pipe(plumber())
     // Caching images that ran through imagemin
-    .pipe(cache(imagemin({
+    .pipe(imagemin({
       progressive: true,
       interlaced: true,
       // don't remove IDs from SVGs, they are often used
       // as hooks for embedding and styling
       svgoPlugins: [{cleanupIDs: false}]
-    })))
+    }))
     .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
+});
+
+gulp.task('audio', function() {
+  return gulp.src('app/audio/**/*')
+  .pipe(gulp.dest('dist/audio'))
 });
 
 gulp.task('clean', function(done) {
@@ -161,7 +166,7 @@ gulp.task('watch', ['browserSync', 'styles'], function(){
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['styles', 'scripts', 'templates', 'wiredep', 'tests:scripts', 'useref', 'images', 'fonts'],
+    ['styles', 'scripts', 'audio', 'templates', 'wiredep', 'tests:scripts', 'useref', 'images', 'fonts'],
     callback
   );
 });
