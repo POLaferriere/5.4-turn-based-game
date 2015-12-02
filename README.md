@@ -1,44 +1,7 @@
-# frontend-scaffolding
+#Pokemon Chartreuse
 
-#### How to get started
+The assignment for the weekend was to create a turn-based fighting style game.  Naturally, the first idea that came to my partner and my mind was Pokemon, and due to our instructor's obsession with the color chartreuse during development, we chose to call it Pokemon Chartreuse.  
 
-1. Start your own project folder with a git clone then git init
+The program is written with vanilla Javascript with some jQuery thrown in to target specific elements.  Although I had no knowledge of models and views that we would start using the week after this was written, the program was written with what could be described as rudimentary versions of models and views.  
 
-    ```sh
-    cd ~/Code/
-    hub clone jacobthemyth/frontend-scaffolding NEWPROJECT
-    cd NEWPROJECT
-    rm -rf .git
-    git init
-    git add .
-    git commit -m "Initial commit"
-    ```
-
-2. Install prerequisites
-
-    ```sh
-    npm install
-    bower install
-    ```
-
-3. Start watching for changes and develop it!
-
-    ```sh
-    gulp
-    ```
-
-4. Ready to push your code to GitHub Pages?
-
-    ```sh
-    # build production assets
-    gulp deploy
-    ```
-
-#### Testing
-
-- To write tests, create `.js` files in the `tests` directory. There is a sample `hello-test.js` to help you get started.
-- To run tests, open http://localhost:3000/tests in your browser
-
-#### License
-
-MIT.
+Writing this game gave me an appreciation for video game coding, especially having to code complex mathematical battle systems.  It also gave me a start to my love of designing user interface/user experience and having to think through all possible user actions at any given time.  
